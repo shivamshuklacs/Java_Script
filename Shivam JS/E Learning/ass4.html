@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> Sub-String E-Mail</title> 
+    <script>
+     function getedpart() {
+        var email = document.getElementById("email").value;
+
+        var epart = emailAddress.substring(0, emailAddress.indexOf("@"));
+        var dpart = emailAddress.substring(emailAddress.indexOf("@") + 1);
+
+        document.getElementById("tep").value = email;
+        document.getElementById("tdp").value = dpart;
+    }
+
+    
+    </script>
+</head>
+  <body>
+      <form id="form1">
+    <table border=2px solid red>
+        <tr>
+        <td>Email : <input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td>Email-Part : <input type="text" id="epart"></td>
+        </tr>
+        <tr>
+            <td>Domain Prt : <input type="text" id="dpart"></td>
+        </tr>
+        <tr>
+            <td> <input type="button" id="dpart" value="SUBMIT" onclick="getedpart()">
+        </td></tr>
+    </table>
+          </form>
+  </body>
+</html>

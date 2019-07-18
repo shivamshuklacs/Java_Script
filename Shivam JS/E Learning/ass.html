@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title> Assingment </title>
+        <link stylesheet="">
+        <script type="text/javascript">
+            function addNumbers(){
+                
+                var fnum = document.getElementById("fnum").value;
+                
+                if(fnum === "")
+                    {
+                        alert("First Number is required");
+                        return;
+                    }
+                fnum=parseFloat(fnum);
+                
+                    if(isNaN(fnum))
+                        {
+                            alert("Enter valid number");
+                            return;
+                        }
+                
+                
+                var snum = document.getElementById("snum").value;
+                
+                if(snum === "")
+                    {
+                        alert("Seconf Number is required");
+                      return;
+                    }
+                snum=parseFloat(snum);
+                    if(isNaN(snum))
+                        {
+                            alert("Enter valid number");
+                            return;
+                        
+                        }
+                
+               /* var fnum = parseFloat(document.getElementById("fnum").value);
+                var snum = parseFloat(document.getElementById("snum").value);
+                
+                if(isNaN(fnum))
+                {
+                    alert("Enter the first number");
+                    return;
+                }
+                if(isNaN(snum))
+                {
+                    alert("Enter the second number");
+                    return;
+                }*/
+                
+                document.getElementById("tr").value = fnum + snum;
+            }
+        </script>
+    </head> 
+    <body>
+        <h1 style="text-align: center"> Assingment JAVASCRIPT ! </h1>
+        
+    <form id="f1" runat="server">
+         <table>
+
+  <tr>
+      First Number :
+    <input type="text" id="fnum" runat="server">
+  </tr>
+  <tr>
+      Second Number :
+    <input type="text" id="snum" runat="server">
+  </tr>
+  <tr>
+      Result :
+    <input type="text" id="tr" runat="server">
+  </tr>
+             <tr>
+    <input type="button" value="add" id="btn" onclick="addNumbers()">
+  </tr>
+  
+</table> 
+        
+        
+        </form>    
+        
+        
+        
+        
+    </body>
+        <!--alert("This is internal JS.")-->
+
+    
+</html>

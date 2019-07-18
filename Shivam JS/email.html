@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title> Email Validation</title>
+</head>
+    <body>
+    <script>
+    
+        function emv(){
+            var em =document.forms["f1"]["email"].value;
+            var x= em.indexOf("@");
+            var y= em.lastIndexOf(".");
+            
+            if(x < 1 || y < x + 2 || y + 2 > em.length)
+                alert("Enter Valid Email");
+            else
+                alert("Congrats !")
+        }
+        
+    </script>
+        
+        <form name="f1" onsubmit="return emv()">
+        E=mail :
+            <input type="text" name="email">
+            <input type="submit" value="Check">
+        
+        </form>
+    
+    
+    </body>
+</html>

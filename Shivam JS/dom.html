@@ -1,0 +1,61 @@
+<html>
+
+<head> 
+
+</head>
+
+<body>
+    <!--<button id="test"> Click ! </button>
+    <p id="output"> </p>
+    <script src="scripts/dom.js"> 
+    
+    </script>-->
+    
+    <form id="myf" novalidate>
+        NUMERIC FIELD
+        <input type="text" name="numFd">
+        <br>
+        <br>
+        TEXT FIELD
+        <input type="text" name="txtFd">
+        <br>
+        <br>
+        <input type="button" name="Submit" value="Submit">
+    </form>
+    
+    <div id="info">
+    
+    </div>
+    
+    <script>
+        function isNum(valToCheck){
+            return !isNaN(valToCheck)
+        }
+        
+        window.onload=function(e){
+            var numFd= document.getElementById('myf').numFd
+            var txtFd= document.getElementById('myf').txtFd
+            
+            var submitForm = document.getElementById('myf').Submit
+            
+            var info = document.getElementById('info')
+            var i=0
+            numFd.onkeydown=function(e){
+                if(!isNum(String.fromCharCode(e.which))
+                    && e.which !==8){
+                        info.innerHTML="Enter Numeric Data Only"
+                        this.style.backgroundColor="red"
+                        e.preventDefault();
+                    }
+                else{
+                    info.innerHTML=''
+                    this.style.backgroundColor='green'
+                }
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>                 
